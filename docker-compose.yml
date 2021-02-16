@@ -1,0 +1,11 @@
+wordpress:
+  image: wordpress
+  links:
+    - wordpress_db:mysql
+  ports:
+    - 9000:80
+
+wordpress_db:
+  image: mysql
+  environment:
+    MYSQL_ROOT_PASSWORD: manroes71
